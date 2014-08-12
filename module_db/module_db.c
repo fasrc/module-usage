@@ -72,6 +72,10 @@ int main(int argc, char **argv)
       int n = p - hostname;
       strncpy(hname,hostname,n);
     }
+  else 
+    {
+      strncpy(hname,hostname,100);
+    }
   if (gettimeofday(&pTime, NULL) != 0)
     {
       mysql_close(&mysql);
